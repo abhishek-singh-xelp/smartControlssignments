@@ -1,7 +1,11 @@
 import BaseModel from "./BaseModel";
-import { ApplicationError } from "../lib/errors";
+import {
+  ApplicationError
+} from "../lib/errors";
 
-import { default as userSchema } from "../schemas/user.schema.js";
+import {
+  default as userSchema
+} from "../schemas/user.schema.js";
 
 export default class userModel extends BaseModel {
   constructor(connection) {
@@ -12,7 +16,9 @@ export default class userModel extends BaseModel {
   }
   async create(userInformation) {
     try {
-      let checkUser = await this.model.find({ email: userInformation.email });
+      let checkUser = await this.model.find({
+        email: userInformation.email
+      });
       console.log(checkUser);
       if (checkUser.length > 0) {
         throw new ApplicationError("EmailId Already Register", 500, {});
@@ -34,19 +40,9 @@ export default class userModel extends BaseModel {
 
   async getUserDetail(userInformation) {
     try {
-      return await this.model.find({ email: userInformation.email });
-    } catch (error) {
-      throw new ApplicationError(error, 500, {});
-    }
-  }
-  async updateUser(userId, userInformation) {
-    try {
-      const user = await this.model.findOneAndUpdate(
-        { _id: userId, statusFlag: true },
-        { $set: userInformation },
-        { new: true }
-      );
-      return user;
+      return await this.model.find({
+        email: userInformation.email
+      });
     } catch (error) {
       throw new ApplicationError(error, 500, {});
     }

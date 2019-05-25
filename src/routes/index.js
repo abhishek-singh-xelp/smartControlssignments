@@ -1,10 +1,13 @@
-import { ApplicationError } from "../lib/errors";
+import {
+  ApplicationError
+} from "../lib/errors";
 
 /**
  * Helper that throws an error to trigger a 400 response if a
  * field is missing.
  * @param {Array<string>} requiredFields List of required fields
  * @param {any} body Body of the request
+ * 
  */
 // function assertRequiredFields(requiredFields = [], body) {
 //   const missingFields = requiredFields.filter(field => !body[field]);

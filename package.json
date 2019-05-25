@@ -14,6 +14,7 @@
         "precommit": "lint-staged",
         "fix-lint": "prettier --write './src/**/*.js' && npm run-script lint"
     },
+
     "jest": {
         "moduleFileExtensions": [
             "js",

@@ -3,7 +3,11 @@ import uuid from "uuid";
 import validator from "validator";
 
 const User = new mongoose.Schema({
-  _id: { type: String, default: uuid.v1 },
+  _id: {
+    type: String,
+    default: uuid.v1
+  },
+
   email: {
     type: String,
     validate: {
@@ -30,6 +34,10 @@ const User = new mongoose.Schema({
   statusFlag: {
     type: Boolean,
     default: true
+  },
+  userType: {
+    type: String,
+    default: null
   }
 });
 

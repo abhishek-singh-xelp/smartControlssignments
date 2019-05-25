@@ -2,6 +2,7 @@ extends:
   - prettier
   - plugin:import/errors
   - plugin:import/warnings
+
 env:
   node: true
 parser: "babel-eslint"
