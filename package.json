@@ -60,7 +60,7 @@
         "husky": "^0.14.3",
         "jsonwebtoken": "^8.0.1",
         "lint-staged": "^4.0.2",
-        "lodash": "^4.17.4",
+        "lodash": "^4.17.19",
         "mongoose": "^5.3.12",
         "uuid": "^3.1.0",
         "validator": "^9.2.0"
